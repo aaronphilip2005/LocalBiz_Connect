@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #1f2937;
+}
+
+/* ERROR 1: topbar color and layout are wrong */
+.topbar {
+    background: #123c69;
+    color:white;
+    padding: 16px 40px;
+    display: flex;
+    
+    align-items: center;
+    justify-content:space-between
+}
+
+/* ERROR 2: logo is too small */
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* ERROR 3: nav links are showing one below another */
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 15px ;
+    font-size: 18px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ERROR 4: page title is wrongly aligned */
+.page-title {
+    padding: 35px 40px 0 40px;
+    text-align: left;
+}
+
+.page-title h1 {
+    color: black;
+    margin-bottom: 5px;
+}
+
+/* ERROR 5: service cards are not in proper grid */
+.features {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 40px;
+    gap:18px;
+
+}
+
+/* ERROR 6: cards are too dark and not looking like cards */
+.card {
+    background: white;
+    color: rgb(0, 0, 0);
+    padding: 24px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+    color: #123c69;
+    margin-top: 0;
+}
+
+/* ERROR 7: price is too big */
+.price {
+    color: blue;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+/* ERROR 8: footer color is wrong */
+footer {
+    text-align: center;
+    padding: 18px;
+    background:rgba(235, 227, 227, 0.99);
+    color:black;
+    margin-top: 30px;
+}
+
+/* ERROR 9: mobile view is not correct */
+@media (max-width: 768px) { 
+    .topbar { flex-direction: column; 
+        gap: 12px; text-align: center; } nav a { display: inline-block; margin: 5px 8px; } .grid, .features, .dashboard-grid { grid-template-columns: 1fr; padding: 20px; } .hero h1 { font-size: 28px; } .form-box { margin: 20px; } .page-content { padding: 20px; } }
