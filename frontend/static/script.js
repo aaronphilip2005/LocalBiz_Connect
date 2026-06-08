@@ -1,25 +1,38 @@
-console.log("Day 4 Flask + SQLite project loaded successfully.");
+console.log("Day 5 Login + Signup project loaded successfully.");
 
 function showMessage() {
     const message = document.getElementById("message");
 
     if (message) {
         message.textContent =
-            "Great! Day 4 connects the contact form to Flask, db.py and SQLite.";
-    }   
-}
-function submitEnquiry(event){
-    event.preventDefault();
-    const Name=document.getElementById("Name").value.trim();
-    const Email=document.getElementById("Email").value.trim();
-    const service=document.getElementById("service").value.trim();
-    const message=document.getElementById("message").value.trim();
-    const formMessage=document.getElementById("formMessage");
-    if(Name==="" || Email==="" || service==="" || message===""){
-        formMessage.textContent="Please fill all the fields before submitting";
-        formMessage.style.color="red";
-        return;
+            "Great! Day 5 adds login, signup, password validation and protected pages.";
     }
-    formMessage.textContent = "Thank you, " + name + "! Your enquiry has been recorded for the Day 2 demo.";
-    formMessage.style.color = "#123c69";
+}
+
+function validateSignupPassword() {
+    const password = document.getElementById("password").value.trim();
+    const confirmPassword = document.getElementById("confirm_password").value.trim();
+    const passwordMessage = document.getElementById("passwordMessage");
+
+    if (password === "" || confirmPassword === "") {
+        passwordMessage.textContent = "Please enter both password fields.";
+        passwordMessage.style.color = "red";
+        return false;
+    }
+
+    if (password.length < 6) {
+        passwordMessage.textContent = "Password must be at least 6 characters.";
+        passwordMessage.style.color = "red";
+        return false;
+    }
+
+    if (password !== confirmPassword) {
+        passwordMessage.textContent = "Passwords do not match.";
+        passwordMessage.style.color = "red";
+        return false;
+    }
+
+    passwordMessage.textContent = "Password looks good.";
+    passwordMessage.style.color = "#123c69";
+    return true;
 }

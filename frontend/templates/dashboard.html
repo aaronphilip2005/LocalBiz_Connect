@@ -1,61 +1,36 @@
 {% extends "base.html" %}
-
 {% block title %}Dashboard - LocalBiz Connect{% endblock %}
 
 {% block content %}
-
-<section class="container">
+<section class="page-title">
     <h1>Dashboard</h1>
-    <p>Now this dashboard reads enquiry data from SQLite database</p>
+    <p>This dashboard reads enquiry data from SQLite database.</p>
 </section>
-
-<!-- ✅ KEEP YOUR ORIGINAL GRID CLASS -->
 <section class="container">
-    <section class="grid1">
-
-        <div class="mincard">
-            <h3>Total Enquiries</h3>
-            <h2>{{ counts.total_enquiries }}</h2>
-        </div>
-
-        <div class="mincard">
-            <h3>Open Requests</h3>
-            <h2>{{ counts.open_requests }}</h2>
-        </div>
-
-        <div class="mincard">
-            <h3>Completed Works</h3>
-            <h2>{{ counts.completed_works }}</h2>
-        </div>
-
-    </section>
+<section class="grid1">
+    <div class="mincard"><h3>Total Enquiries</h3><p class="stat-number">{{ counts.total_enquiries }}</p></div>
+    <div class="mincard"><h3>Open Requests</h3><p class="stat-number">{{ counts.open_requests }}</p></div>
+    <div class="mincard"><h3>Completed Works</h3><p class="stat-number">{{ counts.completed_works }}</p></div>
 </section>
-
-<!-- ✅ KEEP ORIGINAL TABLE STYLE -->
+</section>
 <section class="container">
-
     <div class="box">
         <h3>Recent Enquiries</h3>
-
         <table>
-            <tr>
-                <th>Name</th>
-                <th>Service</th>
-                <th>Status</th>
-            </tr>
-
-            {% for enquiry in enquiries %}
-            <tr>
-                <td>{{ enquiry.name }}</td>
-                <td>{{ enquiry.service }}</td>
-                <td>{{ enquiry.status }}</td>
-            </tr>
-            {% endfor %}
-
+            <thead><tr><th>Name</th><th>Service</th><th>Status</th></tr></thead>
+            <tbody>
+                {% for enquiry in enquiries %}
+                <tr>
+                    <td>{{ enquiry.name }}</td>
+                    <td>{{ enquiry.service }}</td>
+                    <td>{{ enquiry.status }}</td>
+                    
+                </tr>
+                {% endfor %}
+            </tbody>
         </table>
     </div>
-
 </section>
-
 {% endblock %}
-{% block footer %}Dashboard - LocalBiz Connect{% endblock %}
+
+{% block footer %}Dashboard page - protected route{% endblock %}
