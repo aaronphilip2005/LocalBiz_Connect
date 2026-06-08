@@ -1,13 +1,10 @@
 {% extends "base.html" %}
-
 {% block title %}
 About Us - LocalBiz Connect
 {% endblock %}
-
 {% block extra_css %}
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 {% endblock %}
-
 {% block content %}
 <section class="container">
     <h1>About LocalBiz Connect</h1>
@@ -18,16 +15,13 @@ About Us - LocalBiz Connect
        no unnecessary bloat—just a simple, powerful tool to connect local experts with local clients.
     </p>
 </section>
-
 <main class="container">
-
     <section class="card">
         <h3>Project Idea</h3>
         <p style="color:black">
             LocalBiz Connect helps a small business display services online and collect enquiries from customers.
         </p>
     </section>
-
     <section class="card">
         <h3>Why We Are Building This</h3>
         <p style="color:black">
@@ -36,7 +30,6 @@ About Us - LocalBiz Connect
             database, and final submission.
         </p>
     </section>
-
     <section class="card">
         <h3>Future Scope</h3>
         <p style="color:black">
@@ -44,10 +37,8 @@ About Us - LocalBiz Connect
             and SQLite database. Then the dashboard can show real enquiry data.
         </p>
     </section>
-
 </main>
 {% endblock %}
-
 {% block footer %}
 About Page - LocalBiz Connect
 {% endblock %}

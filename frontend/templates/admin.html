@@ -1,17 +1,14 @@
 {% extends "base.html" %}
 {% block title %}Admin - LocalBiz Connect{% endblock %}
-
 {% block content %}
 <section class="page-title">
     <h1>Admin - Enquiries</h1>
     <p style="color:black ;font-family: Arial, sans-serif;font-size:20px">
         View and manage all enquiries submitted through the contact form.</p>
 </section>
-
 <section class="page-content">
     <div class="card table-card">
         <h3>All Enquiries</h3>
-
         <table>
             <thead>
                 <tr>
@@ -24,7 +21,6 @@
                     <th>Action</th>
                 </tr>
             </thead>
-
             <tbody>
                 {% for enquiry in enquiries %}
                 <tr>
@@ -44,5 +40,4 @@
     </div>
 </section>
 {% endblock %}
-
 {% block footer %}Admin page - LocalBiz Connect{% endblock %}

@@ -121,3 +121,77 @@ textarea {
 .container h1{
   color:#123c69;  
 }
+.thankyou-section {
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.thankyou-card {
+    background: #ffffff;
+    max-width: 700px;
+    width: 100%;
+    padding: 50px;
+    text-align: center;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.success-icon {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: #28a745;
+    color: white;
+    font-size: 48px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.thankyou-card h1 {
+    color: #222;
+    margin-bottom: 15px;
+    font-size: 2.5rem;
+}
+.tmessage {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.dashboard-note {
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.secondary-btn {
+     margin-top: 20px; 
+     background: #008080; 
+     color: white; 
+     padding: 12px 22px; 
+     border: none; 
+     border-radius: 8px; 
+     cursor: pointer; 
+     display: inline-block; 
+     text-decoration: none;
+}
+.secondary-btn:hover {
+    background:#008080;
+    
+}
+.demo-note{
+    background:#def6f6;
+    padding: 12px 22px;
+}

@@ -3,18 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>{% block title %}LocalBiz Connect{% endblock %}</title>
-
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-
     {% block extra_css %}{% endblock %}
 </head>
 <body>
-
 <header class="topbar">
     <div class="logo">LocalBiz Connect</div>
-
     <nav>
         {% if session.get('user_id') %}
         <a href="{{ url_for('home') }}">Home</a>
@@ -31,17 +26,13 @@
         {% endif %}
     </nav>
 </header>
-
 {% block content %}{% endblock %}
-
 <footer>
     {% block footer %}
     LocalBiz Connect
     {% endblock %}
 </footer>
-
 <script src="{{ url_for('static', filename='script.js') }}"></script>
-
 </body>
 </html>
 
