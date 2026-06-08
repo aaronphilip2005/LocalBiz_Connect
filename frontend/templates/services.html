@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block title %}
+Services - LocalBiz Connect
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<main class="container">
+
+    <section class="page-title">
+        <h1>Services</h1>
+        <p style="color:black;font-family: Arial, sans-serif;font-size:19px">
+           Accelerate your business growth with LocalBiz Connect, your all-in-one digital partner 
+           delivering high-impact, transparently priced tech solutions engineered to elevate your
+           brand. From stunning, high-converting Website Design and custom App Development prototypes
+           to buzz-worthy Digital Marketing campaigns and flawless IT Support, we handle the heavy
+           technical lifting so you can focus on winning.</p>
+    </section>
+
+    <section class="features">
+
+        <div class="card">
+            <h3>Website Design</h3>
+            <p>
+                Design clean business websites with home, about,
+                services and contact pages.
+            </p>
+            <p class="price">Starting from ₹10,000</p>
+        </div>
+
+        <div class="card">
+            <h3>App Development</h3>
+            <p>
+                Create simple mobile or web app prototypes for small business needs.
+            </p>
+            <p class="price">Starting from ₹25,000</p>
+        </div>
+
+        <div class="card">
+            <h3>Digital Marketing</h3>
+            <p>
+                Prepare social media posts, captions and basic campaign ideas.
+            </p>
+            <p class="price">Starting from ₹8,000</p>
+        </div>
+
+        <div class="card">
+            <h3>IT Support</h3>
+            <p>
+                Support computers, software installation, troubleshooting and basic maintenance.
+            </p>
+            <p class="price">Starting from ₹5,000</p>
+        </div>
+
+    </section>
+
+</main>
+
+{% endblock %}
+
+{% block footer %}
+Services - LocalBiz Connect
+{% endblock %}

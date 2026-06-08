@@ -1,5 +1,12 @@
-function showMessage(){
-    document.getElementById("message").textContent="Thank you for visiting LocalBiz Connect";
+console.log("Day 4 Flask + SQLite project loaded successfully.");
+
+function showMessage() {
+    const message = document.getElementById("message");
+
+    if (message) {
+        message.textContent =
+            "Great! Day 4 connects the contact form to Flask, db.py and SQLite.";
+    }   
 }
 function submitEnquiry(event){
     event.preventDefault();

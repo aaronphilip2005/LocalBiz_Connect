@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}
+About Us - LocalBiz Connect
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+{% endblock %}
+
+{% block content %}
+<section class="container">
+    <h1>About LocalBiz Connect</h1>
+    <p style="color:black ;font-family: Arial, sans-serif;font-size:20px">
+       LocalBiz Connect is a fast, lightweight website built to help neighborhood 
+       businesses grow. It gives local service providers a clean digital storefront
+       to showcase their work and easily collect customer messages. No complex setups,
+       no unnecessary bloat—just a simple, powerful tool to connect local experts with local clients.
+    </p>
+</section>
+
+<main class="container">
+
+    <section class="card">
+        <h3>Project Idea</h3>
+        <p style="color:black">
+            LocalBiz Connect helps a small business display services online and collect enquiries from customers.
+        </p>
+    </section>
+
+    <section class="card">
+        <h3>Why We Are Building This</h3>
+        <p style="color:black">
+            This project helps students understand how a real web project grows:
+            HTML structure, CSS design, JavaScript interaction, backend API,
+            database, and final submission.
+        </p>
+    </section>
+
+    <section class="card">
+        <h3>Future Scope</h3>
+        <p style="color:black">
+            In later stages, the contact form can be connected to a Flask backend
+            and SQLite database. Then the dashboard can show real enquiry data.
+        </p>
+    </section>
+
+</main>
+{% endblock %}
+
+{% block footer %}
+About Page - LocalBiz Connect
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}
+Student Profile - LocalBiz Connect
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<section class="container">
+ <section class="box">
+    <h1>Student Profile</h1>
+
+    <p><b>Name:</b> ABC</p>
+
+    <p><b>College:</b> ABC Engineering College</p>
+
+    <p><b>Skills:</b> HTML, CSS, Basic Python</p>
+
+    <p><b>Career Goal:</b> To become a Full Stack Developer</p>
+
+    <p><b>Contact:</b> abc@example.com</p>
+</section>
+</section>
+
+{% endblock %}
+
+{% block footer %}
+Student Profile - LocalBiz Connect
+{% endblock %}

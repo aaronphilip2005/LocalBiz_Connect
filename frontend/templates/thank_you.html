@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Thank You - LocalBiz Connect{% endblock %}
+
+{% block content %}
+<section class="page-title">
+    <h1>Thank You</h1>
+    <p>Your enquiry has been submitted successfully.</p>
+</section>
+
+<section class="page-content">
+    <div class="card">
+        <h3>What happens next?</h3>
+        <p>Our team will review your enquiry and contact you soon.</p>
+        <a class="primary-btn" href="{{ url_for('dashboard') }}">View Dashboard</a>
+        <a class="primary-btn secondary-btn" href="{{ url_for('admin') }}">View Admin</a>
+    </div>
+</section>
+{% endblock %}
+
+{% block footer %}Thank you page - LocalBiz Connect{% endblock %}

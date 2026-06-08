@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}Admin - LocalBiz Connect{% endblock %}
+
+{% block content %}
+<section class="page-title">
+    <h1>Admin - Enquiries</h1>
+    <p style="color:black ;font-family: Arial, sans-serif;font-size:20px">
+        View and manage all enquiries submitted through the contact form.</p>
+</section>
+
+<section class="page-content">
+    <div class="card table-card">
+        <h3>All Enquiries</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Service</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for enquiry in enquiries %}
+                <tr>
+                    <td>{{ enquiry.id }}</td>
+                    <td>{{ enquiry.name }}</td>
+                    <td>{{ enquiry.email }}</td>
+                    <td>{{ enquiry.phone }}</td>
+                    <td>{{ enquiry.service }}</td>
+                    <td>{{ enquiry.status }}</td>
+                    <td>
+                        <a class="delete-link" href="{{ url_for('delete', enquiry_id=enquiry.id) }}">Delete</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+{% endblock %}
+
+{% block footer %}Admin page - LocalBiz Connect{% endblock %}

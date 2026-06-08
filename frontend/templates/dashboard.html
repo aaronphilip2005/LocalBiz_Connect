@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - LocalBiz Connect{% endblock %}
+
+{% block content %}
+
+<section class="container">
+    <h1>Dashboard</h1>
+    <p>Now this dashboard reads enquiry data from SQLite database</p>
+</section>
+
+<!-- ✅ KEEP YOUR ORIGINAL GRID CLASS -->
+<section class="container">
+    <section class="grid1">
+
+        <div class="mincard">
+            <h3>Total Enquiries</h3>
+            <h2>{{ counts.total_enquiries }}</h2>
+        </div>
+
+        <div class="mincard">
+            <h3>Open Requests</h3>
+            <h2>{{ counts.open_requests }}</h2>
+        </div>
+
+        <div class="mincard">
+            <h3>Completed Works</h3>
+            <h2>{{ counts.completed_works }}</h2>
+        </div>
+
+    </section>
+</section>
+
+<!-- ✅ KEEP ORIGINAL TABLE STYLE -->
+<section class="container">
+
+    <div class="box">
+        <h3>Recent Enquiries</h3>
+
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Service</th>
+                <th>Status</th>
+            </tr>
+
+            {% for enquiry in enquiries %}
+            <tr>
+                <td>{{ enquiry.name }}</td>
+                <td>{{ enquiry.service }}</td>
+                <td>{{ enquiry.status }}</td>
+            </tr>
+            {% endfor %}
+
+        </table>
+    </div>
+
+</section>
+
+{% endblock %}
+{% block footer %}Dashboard - LocalBiz Connect{% endblock %}

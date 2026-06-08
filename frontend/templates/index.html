@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}
+Home - LocalBiz Connect
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+{% endblock %}
+
+{% block content %}
+<main class="container">
+
+    <section class="card">
+        <h1>Welcome to LocalBiz Connect,</h1>
+        <p style="color:black ;font-family: Arial, sans-serif;font-size:20px">
+            A modern, lightweight full-stack web ecosystem 
+            built for local entrepreneurs and small service 
+            enterprises</p>
+    </section>
+
+    <section class="features">
+        <div class="minicard">Website Design</div>
+        <div class="minicard">App Development</div>
+        <div class="minicard">Digital Marketing</div>
+        <div class="minicard">IT Support</div>
+    </section>
+
+    <button>
+        <a class="contactbutton" href="{{ url_for('contact') }}">
+            Contact Us
+        </a>
+    </button>
+
+</main>
+{% endblock %}
+
+{% block footer %}
+Home - LocalBiz Connect
+{% endblock %}

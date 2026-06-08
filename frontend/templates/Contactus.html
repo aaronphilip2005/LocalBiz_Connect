@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}
+Contact Us - LocalBiz Connect
+{% endblock %}
+
+{% block content %}
+
+<section class="page-title">
+    <h1>Contact Us</h1>
+
+    <p style="color:black; font-family: Arial, sans-serif; font-size:20px">
+        Get in touch with LocalBiz Connect today by submitting your service enquiry below.
+        Whether you need a stunning website, a custom app prototype, high-impact marketing,
+        or reliable IT support, simply share your details and our team will reach out with
+        a tailored solution to elevate your business.
+    </p>
+</section>
+<section class="form-box">
+    <form method="POST" action="{{ url_for('contact') }}">
+
+        <label>Name</label>
+        <input type="text" name="name" required>
+
+        <label>Email</label>
+        <input type="email" name="email" required>
+
+        <label>Phone</label>
+        <input type="text" name="phone" required>
+
+        <label>Service</label>
+        <select name="service" required>
+            <option value="">Select a service</option>
+            <option>Website Design</option>
+            <option>App Development</option>
+            <option>Digital Marketing</option>
+            <option>IT Support</option>
+        </select>
+
+        <label>Message</label>
+        <textarea name="message" required></textarea>
+
+        <button type="submit" class="primary-btn">
+            Submit Enquiry
+        </button>
+
+    </form>
+
+</section>
+
+{% endblock %}
+
+{% block footer %}
+Contact Page - LocalBiz Connect
+{% endblock %}
